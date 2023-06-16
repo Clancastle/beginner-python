@@ -21,6 +21,8 @@ def plus():
 
 
 def minus():
+    result = x - y
+    return result
     pass
 
 
