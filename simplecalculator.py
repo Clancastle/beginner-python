@@ -3,12 +3,14 @@ import math
 print("""
 Welcome to our calculator web app. 
 Basic uses are -- +, -, *, /, and others. 
-To check available commands, type -commands.
 
-First release will be simple, next will take only one input jammed together. 
+Update upcoming!! 
 
 Enjoy!!
 """)
+
+# since it is really annoying when errors pop up, i put the whole code in the try, except thing.
+# it is very readable, if anyone has problems, it is because they dont know python.
 
 try:
     x = float(input('Input number >> '))
