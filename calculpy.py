@@ -9,26 +9,31 @@ First release will be simple, next will take only one input jammed together.
 
 Enjoy!!
 """)
+result = 0
+
+x = 7  #float(input('Input number >> '))
+op = input('Input operator >> ')
+y = 10.8  #  float(input('Input number >> '))
 
 while True:
-    x = float(input('Input number >> '))
-    op = input('Input operator >> ')
-    y = float(input('Input number >> '))
 
-    def plus():
-        pass
+    for i in range(1):
 
-
-    def minus():
-        pass
+        def plus():
+            print(f"Answer: 8 + 9")
 
 
-    def times():
-        pass
+        def minus():
+            pass
 
 
-    def divide():
-        pass
+        def times():
+            pass
 
 
+        def divide():
+            pass
 
+
+        if op == '+' or 'plus':
+            plus()
