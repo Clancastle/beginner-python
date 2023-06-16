@@ -9,8 +9,8 @@ Update upcoming!!
 Enjoy!!
 """)
 
-# since it is really annoying when errors pop up, i put the whole code in the try, except thing.
-# it is very readable, if anyone has problems, it is because they dont know python.
+# since it is really annoying when errors pop up, I put the whole code in the try, except thing.
+# it is very readable, if anyone has problems, it is because they don't know python.
 
 try:
     x = float(input('Input number >> '))
@@ -57,6 +57,3 @@ except NameError:
     print('NameError.')
 except ZeroDivisionError:
     print('ZeroDivisionError')
-
-
-
