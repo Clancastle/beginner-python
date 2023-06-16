@@ -10,9 +10,9 @@ First release will be simple, next will take only one input jammed together.
 Enjoy!!
 """)
 
-x = 7  #float(input('Input number >> '))
+x = float(input('Input number >> '))
 op = input('Input operator >> ')
-y = 10.8  #  float(input('Input number >> '))
+y = float(input('Input number >> '))
 
 
 def plus():
@@ -23,7 +23,6 @@ def plus():
 def minus():
     result = x - y
     return result
-    pass
 
 
 def times():
@@ -36,5 +35,15 @@ def divide():
 
 if op == '+' or 'plus':
     plus()
-    print(f' Result: {plus()}')
+    print(f'Result: {plus()}')
+elif op == '-' or 'minus':
+    minus()
+    print(f'Result: {minus()}')
+elif op == '*' or 'times':
+    times()
+    print(f'Result: {times()}')
+elif op == '/' or 'divide':
+    divide()
+    print(f'Result: {divide()}')
+
 
