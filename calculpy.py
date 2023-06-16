@@ -10,40 +10,51 @@ First release will be simple, next will take only one input jammed together.
 Enjoy!!
 """)
 
-x = float(input('Input number >> '))
-op = input('Input operator >> ')
-y = float(input('Input number >> '))
+try:
+    x = float(input('Input number >> '))
+    op = str(input('Input operator >> '))
+    y = float(input('Input number >> '))
 
 
-def plus():
-    result = x + y
-    return result
+    def plus():
+        result = x + y
+        return result
 
 
-def minus():
-    result = x - y
-    return result
+    def minus():
+        result = x - y
+        return result
 
 
-def times():
-    pass
+    def times():
+        result = x * y
+        return result
 
 
-def divide():
-    pass
+    def divide():
+        result = x / y
+        return result
 
 
-if op == '+' or 'plus':
-    plus()
-    print(f'Result: {plus()}')
-elif op == '-' or 'minus':
-    minus()
-    print(f'Result: {minus()}')
-elif op == '*' or 'times':
-    times()
-    print(f'Result: {times()}')
-elif op == '/' or 'divide':
-    divide()
-    print(f'Result: {divide()}')
+    if op == '+':
+        plus()
+        print(f'Result: {plus()}')
+    elif op == '-':
+        minus()
+        print(f'Result: {minus()}')
+    elif op == '*':
+        times()
+        print(f'Result: {times()}')
+    elif op == '/':
+        divide()
+        print(f'Result: {divide()}')
+
+except ValueError:
+    print('ValueError.')
+except NameError:
+    print('NameError.')
+except ZeroDivisionError:
+    print('ZeroDivisionError')
+
 
 
