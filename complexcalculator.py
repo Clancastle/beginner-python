@@ -27,7 +27,7 @@ while True:
     operator_list_in_order = []
     z = input('Write an equation. ')
 
-    operators = ['+', '-','*' ,'/' , '^', '!', "@", '#', '$', '%','&', '(', ')', ':','[', ']', '{', '}', '=']
+    operators = ['+', '-', '*', '/', '^', '(', ')', '%', '=', '!', "@", '#', '$','&', ':', '[', ']', '{', '}']
 
     input_split = z.split() # split to identify each unit. #next is probably ('87+87')
 #to identify and separate by operator, or space #after 90+90 triggers error, run modified
@@ -35,21 +35,31 @@ while True:
 # print(input_split)
 
     for i in input_split: #
-        for operator in operators:
-            for yes in range(1):
-                if operator == operators[0]:
-                    #Solve.add(self)
 
         if i.isdigit():
             i = float(i)
             numbers_list_in_order.append(i)
             print(numbers_list_in_order)
-            #Solve(operator_list_in_order, numbers_list_in_order)
+            # Solve(operator_list_in_order, numbers_list_in_order)
 
         for operator in operators: #
             if i == operator:
                 operator_list_in_order.append(operator)
                 print(operator_list_in_order)
 
+            if operator == operators[0]: #add
+                print(True)
+            elif operator == operators[1]: #minus
+                print(True)
+            elif operator == operators[2]: #times
+                print(True)
+            elif operator == operators[3]: #division
+                print(True)
+            elif operator == operators[4]: #exponent **
+                print(True)
+            elif operator == operators[5]: #paranthasis '('
+                print(operators[5])
+
+                # Solve.add(self)
                 #i can put the solving here, but functions are more challenging to me and
                 # i want to try and see what i can do. plus It's more neat
