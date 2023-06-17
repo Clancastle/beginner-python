@@ -17,16 +17,19 @@ import math
 
  # class or one big function with lots of ifs?
 
-class Solve(): #operators is used...
-    pass
 
 
 while True:
 
+
     numbers_list_in_order = []
     operator_list_in_order = []
-    z = input('Write an equation. ')
 
+
+    def add(*args):
+        print(args)
+
+    z = input('Write an equation. ')
     operators = ['+', '-', '*', '/', '^', '(', ')', '%', '=', '!', "@", '#', '$','&', ':', '[', ']', '{', '}']
 
     input_split = z.split() # split to identify each unit. #next is probably ('87+87')
@@ -34,21 +37,23 @@ while True:
     #code down. like z.split(operators). <-- make that work
 # print(input_split)
 
-    for i in input_split: #
+    for item in input_split:
 
-        if i.isdigit():
-            i = float(i)
-            numbers_list_in_order.append(i)
+        if item.isdigit():
+            item = float(item)
+            numbers_list_in_order.append(item)
             print(numbers_list_in_order)
+
             # Solve(operator_list_in_order, numbers_list_in_order)
 
         for operator in operators: #
-            if i == operator:
-                operator_list_in_order.append(operator)
+            if item == operator:
+                operator_list_in_order.append(item)
                 print(operator_list_in_order)
 
                 if operator == operators[0]: #add
-                    print(True)
+                    print(numbers_list_in_order, operator_list_in_order)
+
                 elif operator == operators[1]: #minus
                     print(True)
                 elif operator == operators[2]: #times
@@ -63,3 +68,14 @@ while True:
                 # Solve.add(self)
                 #i can put the solving here, but functions are more challenging to me and
                 # i want to try and see what i can do. plus It's more neat
+# fix this ---->>>>>>
+##>>>>>>..>>>..[900.0]
+# ['+']
+# True
+# [900.0, 86.0]
+# ['+', '+']
+# True
+# [900.0, 86.0, 7.0]
+# ['+', '+', '*']
+# True
+# [900.0, 86.0, 7.0, 56.0]
