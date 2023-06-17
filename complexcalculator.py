@@ -47,18 +47,18 @@ while True:
                 operator_list_in_order.append(operator)
                 print(operator_list_in_order)
 
-            if operator == operators[0]: #add
-                print(True)
-            elif operator == operators[1]: #minus
-                print(True)
-            elif operator == operators[2]: #times
-                print(True)
-            elif operator == operators[3]: #division
-                print(True)
-            elif operator == operators[4]: #exponent **
-                print(True)
-            elif operator == operators[5]: #paranthasis '('
-                print(operators[5])
+                if operator == operators[0]: #add
+                    print(True)
+                elif operator == operators[1]: #minus
+                    print(True)
+                elif operator == operators[2]: #times
+                    print(True)
+                elif operator == operators[3]: #division
+                    print(True)
+                elif operator == operators[4]: #exponent **
+                    print(True)
+                elif operator == operators[5]: #paranthasis '('
+                    print(operators[5])
 
                 # Solve.add(self)
                 #i can put the solving here, but functions are more challenging to me and
