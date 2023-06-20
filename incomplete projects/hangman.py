@@ -76,7 +76,7 @@ while not guessed_word:
     guesses = input('Input your guess (a letter/ guess the word) ->').lower()
     for life in lives:
         if guesses == word:
-            guessed_word = True
+            #guessed_word = True
             print('You Win!')
             print('Play again?')
             y_n = input('(y) or (n)').lower()
