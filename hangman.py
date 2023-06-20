@@ -1,7 +1,7 @@
 import random
 from itertools import count
 
-guessed_word = False
+guessed_word = False #i dont think this has much effect but ill keep it.
 lives = [1, 2, 3, 4]
 word_site = "https://www.mit.edu/~ecprice/wordlist.10000"
 word_file = "/usr/share/dict/words"
@@ -36,49 +36,76 @@ def letterGuessed(letter):
         return "Guess Failed."
     else:
         for i in word:
-            pass
+
             index_letter = word.index(letter)
-            blanks = ['_' * len(word)]
-            bob = word.split()
+            blanks = ['_'] * len(word)
+            for b in blanks:
+                print(blanks)
+                blanks.remove(b) #then join it
+                pprint(blanks)
+                blanks.insert(b, letter)
 
-            # bob = blanks.insert(index_letter, letter)
-            blanks.insert(index_letter, letter)
-            print(blanks.insert(index_letter, letter))
-            print(bob)
-            # print(type(blanks))
-            # print(index_letter)
-            return blanks
+                # bob = blanks.insert(index_letter, letter)
+                # blanks.insert(index_letter, letter)
+                # print(blanks)
+                # print(blanks.insert(index_letter, letter))
 
-for i in count(1):
-    if difficulty.lower() == 'easy':
-        word = call('easy')
-        print(word)
-        break
-    elif difficulty.lower() == 'mid':
-        word = call('mid')
-        print(word)
-        break
-    elif difficulty.lower() == 'hard':
-        word = call('hard')
-        print(word)
-        break
-    elif difficulty != 'easy' or 'mid' or 'hard':
-        print('Sorry, what was that?')
-        difficulty = input("""
-(Easy) -- Medium(Mid)-- (Hard)
-->""")
-print('BTW, We do not have machine learning here, so sometimes you will get a word you dont know.')
-print('Happy Guessing!')
-print('-')
+                # print(type(blanks))
+                # print(index_letter)
+                print(i)
+                return blanks
+while not guessed_word:
+    for i in count(1):
+        if difficulty.lower() == 'easy':
+            word = call('easy')
+            print(word)
+            break
+        elif difficulty.lower() == 'mid':
+            word = call('mid')
+            print(word)
+            break
+        elif difficulty.lower() == 'hard':
+            word = call('hard')
+            print(word)
+            break
+        elif difficulty != 'easy' or 'mid' or 'hard':
+            print('Sorry, what was that?')
+            difficulty = input("""
+    (Easy) -- Medium(Mid)-- (Hard)
+    ->""")
+    print('BTW, We do not have machine learning here, so sometimes you will get a word you dont know.')
+    print('Happy Guessing!')
+    print('-')
 
-guesses = input('Input your guess (a letter) ->')
-for life in lives:
-    remaining = 4 - life
-    print(letterGuessed(guesses))
+    guesses = input('Input your guess (a letter/ guess the word) ->')
+    for life in lives:
+        if guesses == word:
+            guessed_word = True
+            print('You Win!')
+            print('Play again?')
+            y_n = input('(y) or (n)')
 
-    print(f'{remaining} remaining life.') #if guessed 1 letter correctly
-    # print(f'{lives - life} remaining')
-    guesses = input('Input your guess..')
+            if y_n == 'y':
+                guessed_word = False
+                difficulty = input("""
+    (Easy) -- Medium(Mid)-- (Hard)
+    ->""")
+            elif y_n == 'n':
+                print('Sorry to see you go.')
+            else:
+                guessed_word = False
+                print("Didn't understand that.")
+                difficulty = input("""
+    (Easy) -- Medium(Mid)-- (Hard)
+    ->""")
+                break
+            #break #
+        remaining = 4 - life
+        print(letterGuessed(guesses))
+
+        print(f'{remaining} remaining life.') #if guessed 1 letter correctly
+        # print(f'{lives - life} remaining')
+        guesses = input('Input your guess..')
 
 
 
