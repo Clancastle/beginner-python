@@ -17,7 +17,7 @@ hard_words = list(filter(lambda x: len(x) >= 8, words))
 difficulty = input("""Choose your difficulty.
 (Easy) -- Just say you are a coward.
 Medium(Mid) -- That's fine...
-(Hard) -- Oh, a daredevil!!
+(Hard) -- Oh, a daredevil!
 ->""")#1-5, 6-7, 8+ respectivly (letter count)
 
 #print(hard_words) so the lists work.
