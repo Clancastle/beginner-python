@@ -55,39 +55,49 @@ import string
 #
 # print(play())
 
-word_site = "https://www.mit.edu/~ecprice/wordlist.10000"
-word_file = "/usr/share/dict/words"
-words = open(word_file).read().splitlines()
+
+#hangman with different code than ive written. and it seems better
+# word_site = "https://www.mit.edu/~ecprice/wordlist.10000"
+# word_file = "/usr/share/dict/words"
+# words = open(word_file).read().splitlines()
+#
+#
+# def get_valid_word(words):
+#     word = random.choice(words)
+#     while 'z' in word or '-' in word:
+#         word = random.choice(words)
+#     return word.upper()
+#
+# def hangman():
+#
+#     word = get_valid_word(words)
+#     alphabet = set(string.ascii_uppercase)
+#     word_letters = set(word)
+#     used_letters = set()
+#     lives = 6
+#     while len(word_letters) > 0 and lives > 0:
+#         print('You have', lives, 'lives and have used these:', ' '.join(used_letters))
+#
+#         word_list = [letter if letter in used_letters else '_' for letter in word]
+#         print('Current word: ', ' '.join(word_list))
+#         user_letter = input('Guess a letter: ').upper()
+#         if user_letter in alphabet - used_letters:
+#             used_letters.add(user_letter)
+#             if user_letter in word_letters:
+#                 word_letters.remove(user_letter)
+#             else:
+#                 lives = lives - 1
+#                 print('Not in word.')
+#
+#         elif user_letter in used_letters:
+#             print('You\'ve used that before')
+#         else:
+#             lives = lives - 1
+#             print('Invalid Input')
+#     if lives == 0:
+#         print('Sorry, you\'ve lost')
+#         print(word)
+#
+# hangman()
 
 
-def get_valid_word(words):
-    word = random.choice(words)
-    while 'z' in word or '-' in word:
-        word = random.choice(words)
-    return word.upper()
-
-def hangman():
-
-    word = get_valid_word(words)
-    alphabet = set(string.ascii_uppercase)
-    word_letters = set(word)
-    used_letters = set()
-    while len(word_letters) > 0:
-        print('Youve used these: ', ' '.join(used_letters))
-
-        word_list = [letter if letter in used_letters else '-' for letter in word]
-        print('Current word: ', ' '.join(word_list))
-        user_letter = input('Guess a letter: ').upper()
-        if user_letter in alphabet - used_letters:
-            used_letters.add(user_letter)
-            if user_letter in word_letters:
-                word_letters.remove(user_letter)
-
-        elif user_letter in used_letters:
-            print('You\'ve used that before')
-        else:
-            print('Invalid Input')
-
-    print(word)
-
-hangman()
