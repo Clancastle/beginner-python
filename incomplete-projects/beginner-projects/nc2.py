@@ -1,5 +1,5 @@
 import random
-import string
+import math
 
 #this below gives a number to computer to choose randomly between, and you have to guess.
 # def guess(x):
@@ -99,5 +99,6 @@ import string
 #         print(word)
 #
 # hangman()
+
 
 
