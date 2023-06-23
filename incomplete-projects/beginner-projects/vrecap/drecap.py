@@ -45,7 +45,7 @@ To get rid of not being able to do "Yes  "you" are", do this "yes "\you\" are"
 \b > backspace
 \f > from feed
 \ooo > octal value
-\xhh > hex value
+\ xhh > hex value
 
 string.capitalize() > capitalizes first letter of each word
 string.casefold() > converts string to lower case(aggressive)
@@ -212,13 +212,120 @@ Keep in mind that there are many other built in methods that are available for a
 
 //Tuple
 //Tuples is an array which are ordered and unchangeable nad allows duplicate items
+tuple = (0, 2, 7)
+Tuples can contain any data type: int, str, bool
+Or can contain a combination of data types:
+print(type(tuple))
+You are also able to use tuple(('item', 1)) to make a tuple
+A tuple is unchangeable, but you can print or loop over it > tuple[0]
+As a recap, to access the index of a tuple/list or any array,
+0 for the first item, 1 for the second, and so on. to access the last, make the index -1 or -2 for the second last
+Something like [-4:-1] returns the fourth last to first last, but excludes first last
+You can also do things that you can do with lists, like comprehension, or looping
+If statements are possible as well.
+Once a tuple is created, you cannot change its values
+BUT -- you can convert the tuple to a list, and then change the list, then convert back to a tuple
+list = list(tuple) # as it seems, there is another way to use the list() method
+list[0] = item
+tuple = tuple(list)
+Another way you could go about doing this would be adding another tuple to the tuple
+That would also be a way of updating the tuple. 
+A one item tuple would look like tuple = ('item',) #you have to add a comma
+tuple += ('item',)
+To remove an item in a tuple, use the same workaround we used to add change a tuple
+Or to just delete a tuple use 
+del tuple > completely deletes the tuple
+When we  assign values to a tuple, we call it packing.
+To unpack, we would assign variables.
+tuple = (1, 2, 3)
+(var1, var2, var3) = tuple 
+And that would multi assign the values in the list to the variables
+NOTE: That the variables must match the number of values in the tuple,
+if not, you must use an asterisk to collect the remaining values as a list
+(var1, *var2) = tuple
+if the asterisk is placed before the last variable (var2), var2 will contain the remaining values as a list
+Else, if the asterisk is somewhere else, python will assign values until the values match the variables left
+To loop through a tuple, use for loop, or list comprehension, (that you know of so far)
+for i in tuple: print(i) > this prints out each value in the tuple
+for i in range(len(tuple)): print(i) > this prints out the indexes of the tuple, including 0
+i = 0; while i < len(tuple):; print (i); i += 1
 
-
+Another thing you can do is tuple1 = tuple * 2 
+this duplicates your tuple and makes it a new tuple
+You can use these tuple methods 
+tuple.count(value)
+tuple.index(value)
+Keep in mind that there are many more methods in general
+and more methods only available to understand for the advanced class
 
 //Set
-//Set is an array which is unordered, unchangeable -> (frozenset), and unindexed
+//Set is an array which is unordered, unchangeable, and unindexed
+set = {'item', item1', 'item2'}
+sets are unordered, so you cannot be sure in which order they will appear
+sets do not allow items with the same value e.x. True, 1 (They are considered the same values)
+A set can also contain different data types as you can see from above
+You can use these as well - type() len() set() etc
+As well as use loops to print out the set. 
+Something I think I hadn't mentioned before, is that you can use the in keyword to check if something is in the set
+Go back to the section on operators and think to yourself about what you can do
+You cannot change a set after its creation, but you can add values. (frozenset)
+set.add(value)
+set.update(set1) > adds set1 to set, with random order
+set.update(list) > you can even add a dictionary or tuple to add to a set, etc
+To remove use set.remove(value) > if not found, will raise error
+To remove without error if not found, use set.discard()
+Also for some fun, why not use set.pop() ? It will remove a random item
+to clear or delete the set, use set.clear() / del set
+
+Sets are very interesting, and have some unusual methods:
+sets = set.union(set1) > this returns a set with items from both sets: remember, no duplicates
+set.update(set1) > inserts all items from set1 into set
+set.intersection_update(set1) > keeps only the duplicates found in both sets, in set
+set3 = set.intersection(set1) > returns a new set where only the duplicates in both sets are
+set3.symmetric_difference_update(set1) > returns set3, and will keep only the elements that are not in both sets
+set3 = set2.symmetric_difference(set1) > returns a new set that does the same thing as its counterpart with _update
+------- Here is a full list of set methods --------
+set.add() > adds value to set
+set.clear() > clears set, does not delete it
+set.copy() > copies a set
+set.difference() > returns a set that contain the items that exist ONLY in the first set
+set.difference_update() > removes the items in set that are also in another set
+set.discard() > removes item without error
+set.intersection() > returns a new set where only the items seen in all sets are kept
+set.intersection_update() > updates set by removing all items not found in another set
+set.isdisjoint() > returns whether 2 sets have an intersection or not
+set.issubset() > returns whether another set contains this set
+set.issuperset() > returns whether this set contains another set
+set.pop() > removes random value
+set.remove() > removes specified value, gives error if not found
+set.symmetric_difference() > returns a set with only non duplicates, not found in both sets
+set.symmetric_difference_update() > Remove the items that are present in both sets, AND insert the items that is not present in both sets: 
+set.union() > returns 2 unified sets
+set.update() > update set by adding another set
+frozenset() > like calling set, only this frozenset is more like a tuple
+
 
 //Dictionary
 //Is an collection which is ordered and changeable with no duplicate members 
+dict = {
+    "name": "mosh",
+    "brand": "volvo",
+    "year": 2001
+}
+A dictionary values are called keys, and values. key:value pairs
+To print a value, refer to the key first. 
+print(dict["name"])
+The newest 3.7 version of python is ordered dictionary, but if you are working on a older version
+your dictionary might be unordered. to fix this, from tkinter import Ordereddict 
+or search up on google if that doesnt work out. 
+If you have a duplicate in a list, the duplicate key:value pair will overwrite the original one
+It is also possible to use dict() to make a dictionary
+
+
+
+
+
+
+
 
 """
