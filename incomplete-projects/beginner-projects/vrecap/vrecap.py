@@ -31,3 +31,27 @@ aa = aaa = v7 = "Im gay"
 print(aa)
 print(aaa)
 print(v7)
+#unpack --
+list = ['I', 'Love', "You"]
+f, r, y = list
+print(f)
+print(r)
+print(y)
+#or
+
+print(f, r, y) # (f + r + y)
+
+try:
+    global g  # we do this, so we can call g, o
+    global o  # because g and o are out of our scope, it is declared ina n indent and we are after the indent
+    # but we should use functions or loops instead, dont use global ()
+    g = 7
+    o = 'days till i win'
+    print(g + o)
+except Exception as e:
+    print(e)
+
+print(g, o)
+
+listh = [7, 9 , 2, 40]
+print(listx)
