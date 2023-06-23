@@ -319,8 +319,156 @@ The newest 3.7 version of python is ordered dictionary, but if you are working o
 your dictionary might be unordered. to fix this, from tkinter import Ordereddict 
 or search up on google if that doesnt work out. 
 If you have a duplicate in a list, the duplicate key:value pair will overwrite the original one
-It is also possible to use dict() to make a dictionary
+It is also possible to use dict() to make a dictionary; dict(name = 'me', age = 35)
+You refer to the items of a dictionary by calling its key name
+print(dict['age']) | print(dict.get('age'))
+dict.keys() > will return all keys in dictionary
+dict.values() > return all values in dictionary
+You can update the dictionary like so; dict['age'] = 23
+dict.items() > will return key:value pairs in dictionary as tuples
+A reminder that you can use if in statements to check if a key is in the dictionary
+dict.update({key: value}) > will update the dictionary with the items given in the parameters
+to add a key:value pair; dict['new_key'] = 'value'; dict.update()
+If you want to check if a key that does not exist, is in your dict, it will return None
+dict.pop() > removes the key:value pair when you specify what key
+dict.popitem() > removes the last inserted item, or older versions - random
+del dict['key'] | del dict | dict.clear()
+To loop over a dict and print things out, you would need a different method
+Will be shown on one line..
+for i in dict; print(i) | for x in dict.keys(); print(x); prints the key only, one by one
+for i in dict; print(dict[i]) | for x in dict.values; print(x); this prints the values only one by one
+for x, y in dict.items(); print(x, y); prints both key:value pairs one by one 
+To copy a list, you must not do this; dict1 = dict
+because the dict1 variable will just call to the other dict
+make a copy by utilizing dict(). 
+dictcopy = dict(dict)
+We can also create a dictionary that has dictionaries inside, called nested dictionaries
+garage = {
+    "chevy": {'year': 1998},
+    "porsche": {'year': 2045},
+    "audi": {'year': 2006}
+}
+Or, imagine that those cars were their own dictionaries. 
+We could add them to one dictionary list so, 
+garage = { #we do this because if they were their own separate dictionaries, the car name would be the dictionary name
+    "chevy": chevy,
+    "porsche": porsche,
+    "audi": audi
+} 
+In this way you can also tell that we can put a variable as a value in a dictionary
+And the way to access the key:value pairs would be like so,
+print(garage['porsche']['year'])
 
+Here are all of the dictionary methods available to use
+dict.clear() > clears dict of all key:value pairs
+dict.copy() > makes a copy of dictionary
+dict.fromkeys() > returns dict with specified keys:values
+dict.get() > returns value of key
+dict.items() > returns a tuple of each pair
+dict.keys() > returns a list containing all dictionary keys
+dict.pop() > deletes the value for the specified key
+dict.popitem() > deletes last inserted pair
+dict.setdefault() > returns the value of the specified key, if key does not exist, insert key with specified value
+dict.update() > update dict with specified key:value pairs
+dict.values() > returns a list of all the values in the dictionary 
+
+//If.. Else:
+Conditions: 
+== - equals
+!= - not equal
+< - less than
+> - greater than
+<= - less than or equal to 
+>= - greater than or equal to
+
+Statements:
+if x < y:
+    pass
+elif x == y:
+    pass
+elif x > y:
+    pass
+else:
+    pass
+
+Everything is very simple and its very easy to understand
+the if tests if the conditions are true, and if it isnt, it continues to elif, and so on
+if your statement is short, you can do this,
+if a == b: print(a)
+or like for an addition of else:
+print(a) if a > b else print(b)
+print(a) if a > b else print('=') if a == b else print(b)
+you can also use and, to make sure both conditions are true before they run
+if condition and condition:
+    pass
+if condition or condition:
+    pass
+if condition and not condition:
+    pass
+if not condition:
+    pass
+you can also have nested if statements.
+
+if statement:
+    if statement:
+        pass
+
+//While loops
+
+while True:
+    pass
+i = 4
+while i < 10:
+    i += 1
+    break - breaks the loop or the statement
+    continue - stops the iteration, and moves to the next 
+
+//For loops
+a for loop iterates through a sequence. a list, string, tuple, set, or dict
+for x in 'word' print(x)
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+  if x == "banana":
+    break
+else:
+    print('this runs when for loop finishes if not stopped by break')
+range(start, stop, step)
+
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+  for y in fruits:
+    print(x, y)
+
+//Functions
+def fuc():
+    print('c')
+fuc()
+
+def func(x):
+    return x + 7
+
+print(func(3))
+
+def myname(name, age):
+    return f' my name is {name} and i am {age} years young'
+print(myname('bob', 68))
+
+*args for not knowing how many parameters you will give
+def f(*args):
+    pass
+
+print(f('yes', 'no', 1)
+
+**kwargs for 
+
+def my_function(**kid):
+  print("His last name is " + kid["lname"])
+
+my_function(fname = "Tobias", lname = "Refsnes")
 
 
 
