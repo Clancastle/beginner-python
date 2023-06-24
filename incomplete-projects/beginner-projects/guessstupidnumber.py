@@ -30,20 +30,22 @@ def UserCallGame():
 
 
 game = GenRandomNumber(UserCallGame())
+"""^^^^^Interesting cause this actually saves this times call of the function, so the random number will get saved
+but if we call Game(GenRandomNumber(UserCallGame())), this will give a new number"""
 
 def Guess(HiddenNumber):
     guesses = input('Guess a number..')
     if guesses.isdigit():
         guess = int(guesses)
         if HiddenNumber == guess:
-            print('Congrats you won, would you like to play again? (y/n) \n')
-            y_n = input('> ')
-            if y_n == 'y':
-                Guess(GenRandomNumber(UserCallGame()))
-            elif y_n == 'n':
-                print('Sorry to see you go.')
-            else:
-                print('Understandable, have a great day.')
+            print('Congrats you won')#, would you like to play again? (y/n) \n')
+            # y_n = input('> ') # this code doesnt work, it doesnt save the new number as the hidden number
+            # if y_n == 'y':
+            #     Guess(GenRandomNumber(UserCallGame()))
+            # elif y_n == 'n':
+            #     print('Sorry to see you go.')
+            # else:
+            #     print('Understandable, have a great day.')
 
         elif guess < HiddenNumber:
             print(f"Hidden Number is higher than: {guess}")
