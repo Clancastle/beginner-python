@@ -455,7 +455,7 @@ print(func(3))
 
 def myname(name, age):
     return f' my name is {name} and i am {age} years young'
-print(myname('bob', 68))
+myname('bob', 68)
 
 *args for not knowing how many parameters you will give
 def f(*args):
@@ -469,11 +469,27 @@ def my_function(**kid):
   print("His last name is " + kid["lname"])
 
 my_function(fname = "Tobias", lname = "Refsnes")
+//
 
+list = []
+ 
+def l(list)
+    print(list)
+l(list)
 
+recursion 
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
 
+print("\n\nRecursion Example Results")
+tri_recursion(6)
 
-
+//Lambda 
 
 
 """
