@@ -5,7 +5,7 @@ import time
 
 def play():
     feedback = random.choice(["r", "p", "s"])
-    print(feedback)  # it is better to do .upper() then give user lower since it has a lower margin error
+    # print(feedback)  # it is better to do .upper() then give user lower since it has a lower margin error
     user = input('You are playing rock, paper, scissors. \nrock (r); paper(p); scissors(s)\n').lower()
     # r, p, s
     # r > s; s > p; p > r
