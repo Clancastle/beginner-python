@@ -39,7 +39,7 @@ def Guess(HiddenNumber):
         guess = int(guesses)
         if HiddenNumber == guess:
             print('Congrats you won')#, would you like to play again? (y/n) \n')
-            # y_n = input('> ') # this code doesnt work, it doesnt save the new number as the hidden number
+            # y_n = input('> ') ## this code doesnt work, it doesnt save the new number as the hidden number
             # if y_n == 'y':
             #     Guess(GenRandomNumber(UserCallGame()))
             # elif y_n == 'n':
@@ -65,4 +65,4 @@ def Guess(HiddenNumber):
 """Wow I am actually amazed. I wrote this myself, no help.
 I did not know I could call functions in functions in functions or idk like this.
 It does get confusing after a while."""
-Guess(game)
+Guess(game) #or put this function in a while game:, and game is bool, if they want to play
