@@ -35,10 +35,13 @@ def playagain():
     else:
         print('Sorry try again?')
         playagain()
+        time.sleep(1)
 
 
 while True:
+    time.sleep(.2)
     play()
     if playagain() == 'n':
+        time.sleep(2)
         break
 
