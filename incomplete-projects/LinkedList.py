@@ -9,46 +9,26 @@
 # analyze solution/algorithm, overcome inefficiency
 # repeat 3-5
 
-class Node():
-    value = None
-    next_n = None
+#make linked list
+class Node():#<-- object
+    def __init__(self, d, n=None): #node > data|next
+        self.data = d
+        self.next = n
+    def get_next(self): #returns the next node after current, used for traversing, deleting etc.
+        return self.next
+    def set_next(self, n): #this makes it easier to see the next data, you make next var (n)
+        self.next = n
+    def get_data(self):
+        return self.data #returns the current data in node
+    def set_data(self, d):
+        self.data = d #sets data, so you can call Node().data, more readable ig
 
-    def __init__(self, value):
-        self.value = value
-    def __str__(self):
-        return f"Node: {self.value} " #%self.value
+class Linkedlist(): #<-- object
+    def __init__(self, r=None):
+        self.root = None
+        self.size = 0 #for the size of the LinkedList
+    def get_size(self): # will += size when another node gets added
+        return self.size
 
-class LinkedList():
-    pass
-
-
-n = Node(1)
-nn = Node(2)
-nnn = Node(3)
-nn.next_n = n
-nn.next_n.next_n = nnn
-print(nn.next_n)
-print(nn.next_n.next_n)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def add(self, d):
+        new_node = Node(d, self.root) #makes a node with data added, and the next data
