@@ -79,7 +79,7 @@ mylist = Linked()
 mylist.add(3)
 mylist.add(9)
 mylist.add(10)
-print(mylist.find(90))
+print(mylist.find(1))
 
 
 
