@@ -14,6 +14,8 @@ class Node():#<-- object
     def __init__(self, d, n=None): #node > data|next
         self.data = d
         self.next = n
+    def __str__(self):
+        return self.data
     def get_next(self): #returns the next node after current, used for traversing, deleting etc.
         return self.next
     def set_next(self, n): #this makes it easier to see the next data, you make next var (n)
@@ -32,3 +34,16 @@ class Linkedlist(): #<-- object
 
     def add(self, d):
         new_node = Node(d, self.root) #makes a node with data added, and the next data
+        self.root = new_node #it updates the node, now if you call it it would have different values
+        self.size += 1 # counts the amount of data or nodes, there is
+
+    def remove(self):
+        this_node = self.root
+        prev_node = None
+
+
+
+l = Linkedlist()
+l.add(7)
+l.add(9)
+print(l)
