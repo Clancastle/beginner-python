@@ -1,0 +1,55 @@
+"""
+
+Defining the Purpose
+1. Answer some basic questions, maybe incorporate chatgpt
+- play some basic games, moderate server to some extent, - block sexual innuendo
+- some games would be - blackjack; roll; rock,p,s ; maybe generate out of context phrases, completley stupid
+(check)
+
+2. DEv environment, set up.
+Make sure you have Python installed on your system.
+Create a new directory for your project and set up a virtual environment to manage dependencies.
+- set up. (check)
+
+3. discord api, bot token
+Create a Discord account if you don't have one already.
+Then, follow the Discord developer documentation to create a new bot application and obtain the bot token.
+This token will be required to authenticate your bot with the Discord API.
+
+4. Choose library
+There are several Python libraries to interact with the Discord API.
+Some popular ones are discord.py, discord.py-rewrite, and discord.py-next.
+Choose one that suits your needs and has good community support.
+discord.py (check)
+
+5. Functionality
+Set up your bot to log in using the token, connect to your Discord server,
+and respond to basic commands. For example, make it reply to a specific command like !hello with a greeting.
+
+6. implement AI capability
+To add AI capabilities, you can integrate a natural language processing (NLP) model or a chatbot model.
+One option is to use the Hugging Face Transformers library, which provides pre-trained language models.
+GPT-3 is an example of a powerful language model, but you might also start with a smaller model like GPT-2.
+
+7. Train+ Fine Tune
+If you choose a pre-trained model, you might need to fine-tune it on a custom dataset that fits your specific bot's purpose.
+Alternatively, you can use the model directly and fine-tune it over time based on user interactions.
+
+8. Deploy
+Popular options for hosting include Heroku, AWS, and DigitalOcean.
+
+9. Handle Errors, Exceptions
+Make your bot robust by handling errors and exceptions gracefully. Ensure that it doesn't crash or become unresponsive
+if it encounters unexpected situations.
+
+10. Test and Repeat
+Test your bot thoroughly to identify and fix any bugs or issues.
+Consider user feedback to improve the bot's functionality and responses.
+
+11. Monitor, Maintain
+After deployment, monitor your bot's performance and usage.
+Be prepared to update and maintain it as needed, especially if Discord API changes or your bot's AI model requires updates.
+
+
+
+"""
