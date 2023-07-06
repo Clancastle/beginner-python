@@ -1,7 +1,14 @@
 import smtplib
 # soon create an automatic email sender
-fro, to = 'dennisungureanu0@gmail.com', 'dennjsu.business@gmail.com'
-message = 'Join our mailing service.'
+d = 'dennisungureanu0@gmail.com'
+db = 'dennjsu.business@gmail.com'
+
+fro, to = d, 'arinaelisau@gmail.com'
+message = """
+CHECK YOUR EMAIL"""
+
+dju ='pbtmwsglirbshydi'
+bju_pass = 'qczqtuyctdckbakb'
 #simple mail transfer protocol import smtplib
 
 # email = input("Email:")
@@ -13,8 +20,9 @@ with smtplib.SMTP('smtp.gmail.com', 587) as smtserver:
     smtserver.ehlo()
     smtserver.starttls()
     smtserver.ehlo()
-    smtserver.login('dennisungureanu0@gmail.com','rjhsnasaykelprxw')
-    for i in range(1):
+    #smtserver.login('dennisungureanu0@gmail.com','rjhsnasaykelprxw')
+    smtserver.login(db, bju_pass)
+    for i in range(25):
         smtserver.sendmail(fro, to, message)
         #this sends the message to spam
         print(i)
