@@ -9,16 +9,16 @@ fname = ''
 lname = ''
 
 function Clear(){
-    document.getElementById('sign-up-text').textContent = " "
+    // document.getElementById('sign-up-text').textContent = " "
 }
 
 function regex(){
     
 }
 
-function SignUp(){
+function signUp(){
     // clear()
-    console.log('ji')
+    
 }
 
     // take inputs fro fields

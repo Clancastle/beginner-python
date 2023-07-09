@@ -21,15 +21,15 @@
 
     
     <h1 class="center font" id="no_regret">You wont regret.</h1>
-    <input class="center" id="email" placeholder="Email"><br> <!--so split at @ or +, and have that as username-->
+    <input class="center" id="email" type="email" placeholder="Email" required-pattern="[A-Za-z]" required><br> <!--so split at @ or +, and have that as username-->
 
-    <input class="center" id="age" placeholder="Age" required-pattern="[0-9]{3}" type="number"><br>
+    <input class="center" id="age" placeholder="Age" required-pattern="[0-9]{3}" type="number" step="1" min="10" max="100" required><br>
 
-    <input class="center" id="fname" placeholder=" First Name"><br>
+    <input class="center" id="fname" placeholder=" First Name" required ><br>
 
     <input class="center" id="lname" placeholder="Last Name"><br>
 
-    <button class="center" id="button_submit"onclick="Clear()">Sign-up</button><br>
+    <button class="center" id="button_submit" type="submit" onclick="signUp()">Sign-up</button><br>
 
     <h3 class="center font disc">Our newsletter is owned by a developer. <br>
     We mostly talk on business, self-improvement, wisdom,<br>
