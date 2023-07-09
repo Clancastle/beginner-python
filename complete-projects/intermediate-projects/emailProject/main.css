@@ -49,6 +49,10 @@ input:hover{
 #sign-up-text{
     font-size:30px
 }
+#no_regret{
+    font-size: 25px;
+    font-weight: 600;
+}
 ::placeholder {
     color: #606960;
 }
