@@ -1,0 +1,47 @@
+body {
+    background-color: #3a5a40;
+}
+
+/*import some good font*/
+
+#img_sait {
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+#sign-up-text{
+    margin-bottom: 40px;
+}
+.disc {
+    font-size: small;
+    font-weight: 50;
+}
+.center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto auto;
+    justify-content: center;
+    
+}
+
+button, input {
+    border-radius: 1px black;
+    background: #dad4d4;
+    padding: 10px 9px;
+    border: black;
+}
+
+input:hover{
+    background-color: #dfcdcdfd;
+}
+#button_submit:hover{
+    background-color: #dfcdcdfd;
+}
+#fname, #lname, #age, #email, #button_submit{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #132a13;
+    border-radius: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
