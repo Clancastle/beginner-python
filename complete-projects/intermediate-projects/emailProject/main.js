@@ -2,10 +2,14 @@
 
 //js = document.getElementById('input').textContent
 //js = 'yes'
-doc = document
+// class data to store dat
+email = ''
+age = 0
+fname = ''
+lname = ''
 
 function clear(){
-    document.getElementById('email').textContent = ""
+    document.getElementById('email').textContent = " "
 }
 
 function regex(){
@@ -13,6 +17,8 @@ function regex(){
 }
 
 function SignUp(){
-    clear()
+    // clear()
+    console.log('ji')
 }
+
     // take inputs fro fields

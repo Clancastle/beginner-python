@@ -44,4 +44,11 @@ input:hover{
     border-radius: 7px;
     padding-left: 25px;
     padding-right: 25px;
+    color: #606960;
+}
+#sign-up-text{
+    font-size:30px
+}
+::placeholder {
+    color: #606960;
 }
