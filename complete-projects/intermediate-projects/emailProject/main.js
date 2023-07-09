@@ -8,8 +8,8 @@ age = 0
 fname = ''
 lname = ''
 
-function clear(){
-    document.getElementById('email').textContent = " "
+function Clear(){
+    document.getElementById('sign-up-text').textContent = " "
 }
 
 function regex(){
