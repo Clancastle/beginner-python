@@ -1,11 +1,11 @@
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
 const age = document.getElementById('age');
 
-document.getElementById('form').addEventListener('submit', e => {
+form.addEventListener('submit', e => {
     e.preventDefault();
-
     validateInputs();
 });
 
@@ -26,27 +26,45 @@ const setSuccess = element => {
     cntrl.classList.add('success');
     cntrl.classList.remove('error');
 };
+
 const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     return re.test(String(email).toLowerCase());
-}
+};
+
 const validateInputs = () => {
     const emailValue = email.value.trim();
-    const ageValue = age.value.trim();
+    const ageValue = parseInt(age.value.trim(), 10);
     const fnameValue = fname.value.trim();
+    const lnameValue = lname.value.trim();
 
-    if(email === ""){
-        setError(email, "Email is required")
-
-    }else if(!isValidEmail(email)){
-        setError(email, "Invalid Email")
-    }else {
-        setSuccess(email)
+    if (fnameValue === "") {
+        setError(fname, "First Name is required");
+    } else if (fnameValue.length < 3 || fnameValue.length > 20 || !isNaN(fnameValue)) {
+        setError(fname, "First Name must be between 3 and 20 characters and should not be a number");
+    } else {
+        setSuccess(fname);
     }
-// let regexAge=/^[0-9]+$/
-    if (age !== 34){
-        setError(age, "Age ")
-    }else{
-        setSuccess(age)
+
+    if (lnameValue === "") {
+        setError(lname, "Last Name is required");
+    } else if (lnameValue.length < 3 || lnameValue.length > 25 || !isNaN(lnameValue)) {
+        setError(lname, "Last Name must be between 3 and 25 characters and should not be a number");
+    } else {
+        setSuccess(lname);
+    }
+
+    if (ageValue <= 0 || isNaN(ageValue)) {
+        setError(age, "Invalid Age");
+    } else {
+        setSuccess(age);
+    }
+
+    if (emailValue === "") {
+        setError(email, "Email is required");
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, "Invalid Email");
+    } else {
+        setSuccess(email);
     }
 };

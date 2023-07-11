@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />-->
-<!--    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-        this takes way too long to load, it is inefficient</his>-->
-
     <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
 <!--    <link rel="python" href="fullemai lproject.py"> might be bad to connect this stright to web-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,33 +12,39 @@
 </head>
 
 <body>
+    <!-- later create a pop up menu or smtn, where i can see motiv quotes, and some past issues  -->
     <h1 class="center font" id="sign-up-text">Sign up for our newsletter.</h1>
     <img src="f48574280b3fb9ea8d06d01ade9ff530.jpg" class="center" id="img_sait" alt="Saitama Motivation">
 
-    <form id="form" action="/">
+    <form id="form" action="/"> <!--action="/"-->
         <div class="center cntrl">
             <h1 id="no_regret">You wont regret.</h1> <!--allow . _ - +  before @-->
+
+        </div>
+        <div class="center cntrl"><br>
             <div class="error"></div>
+            <input id="email" type="text" placeholder="Email" required-pattern="[A-Za-z0-9._-+]+@[a-z]+.[com|edu|net|org|in]" ><br> <!--so split at @ or +, and have that as username-->
+            
         </div>
         <div class="center cntrl">
-            <input id="email" type="text" placeholder="Email" required-pattern="[A-Za-z0-9._-+]+@[a-z]+.[com|edu|net|org|in]" required><br> <!--so split at @ or +, and have that as username-->
             <div class="error"></div>
+            <input id="age" placeholder="Age" type="number" step="1" min="10" max="100" required-pattern="[13]" ><br>
+            
         </div>
         <div class="center cntrl">
-            <input id="age" placeholder="Age" type="number" step="1" min="10" max="100" required-pattern="[13]" required><br>
             <div class="error"></div>
-        </div>
-        <div class="center cntrl">
             <input id="fname" placeholder="First Name" type="text" required><br>
-            <div class="error"></div>
+            
         </div>
         <div class="center cntrl">
+            <div class="error"></div>
             <input id="lname" placeholder="Last Name" type="text"><br>
-            <div class="error"></div>
+            
         </div>
         <div class="center cntrl">
+            <div class="error"></div>
             <button class="center" id="button_submit" type="submit">Sign-up</button><br>
-        <div class="error"></div>
+        
         </div>
     </form>
 

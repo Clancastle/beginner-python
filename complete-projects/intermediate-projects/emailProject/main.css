@@ -4,28 +4,23 @@ body {
   font-family: 'ply disply';
   background-color: #3a5a40;
 }
-
 #img_sait {
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
 #sign-up-text {
     margin-bottom: 40px;
     font-size: 30px;
 }
-
 .disc {
     font-size: small;
     font-weight: 500;
 }
-
 .center {
-    display: flex;
+    display: block;
+    justify-content: center;
     text-align: center;
-    justify-content: center;
-    margin: auto auto;
-    justify-content: center;
+    margin: 0 auto;
 }
 
 button,
@@ -49,8 +44,8 @@ input:hover {
 #age,
 #email,
 #button_submit {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 13px;
+    margin-bottom: 5px;
     padding-left: 25px;
     padding-right: 25px;
     color: #606960;
@@ -59,6 +54,7 @@ input:hover {
 #no_regret {
     font-size: 25px;
     font-weight: 400;
+    margin-bottom: 10px;
 }
 
 ::placeholder {
@@ -68,14 +64,13 @@ input:hover {
     outline: 0;
 }
 .cntrl.success input{
-    border-color: red;
+    border-color: #132a13;
 }
 .cntrl.error input {
-    border-color: red;
+    border-color:#132a13;
 }
 .cntrl .error {
     color: red;
-    font-size: 4px;
-    height: 10px;
-    
+    font-size: 10px;
+    height: 0px;
 }
