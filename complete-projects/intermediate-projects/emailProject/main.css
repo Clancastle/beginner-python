@@ -1,58 +1,66 @@
-body {
-    background-color: #3a5a40;
-}
+@import url('https://fonts.google.com/specimen/Playfair+Display');
 
-/*import some good font*/
+body {
+  font-family: 'ply disply';
+  background-color: #3a5a40;
+}
 
 #img_sait {
     margin-top: 40px;
-    margin-bottom: 70px;
-}
-#sign-up-text{
     margin-bottom: 40px;
 }
+
+#sign-up-text {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
 .disc {
     font-size: small;
-    font-weight: 50;
+    font-weight: 500;
 }
+
 .center {
     display: flex;
     text-align: center;
     justify-content: center;
     margin: auto auto;
     justify-content: center;
-    
 }
 
-button, input {
-    border-radius: 1px black;
+button,
+input {
+    border-radius: 7px;
     background: #dad4d4;
     padding: 10px 9px;
-    border: black;
+    border: 1px solid #132a13;
 }
 
-input:hover{
-    background-color: #dfcdcdfd;
+input:hover {
+    background-color: #c1bcbcfd;
 }
-#button_submit:hover{
-    background-color: #dfcdcdfd;
+
+#button_submit:hover {
+    background-color: #c1bcbcfd;
 }
-#fname, #lname, #age, #email, #button_submit{
+
+#fname,
+#lname,
+#age,
+#email,
+#button_submit {
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 1px solid #132a13;
-    border-radius: 7px;
     padding-left: 25px;
     padding-right: 25px;
     color: #606960;
 }
-#sign-up-text{
-    font-size:30px
-}
-#no_regret{
+
+#no_regret {
     font-size: 25px;
     font-weight: 400;
 }
+
 ::placeholder {
     color: #606960;
 }
