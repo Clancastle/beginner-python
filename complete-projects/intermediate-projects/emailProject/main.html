@@ -6,7 +6,7 @@
         this takes way too long to load, it is inefficient</his>-->
 
     <link rel="stylesheet" href="main.css">
-    <script defer src="main.js"> </script>
+    <script src="main.js"></script>
 <!--    <link rel="python" href="fullemai lproject.py"> might be bad to connect this stright to web-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,18 +19,31 @@
     <h1 class="center font" id="sign-up-text">Sign up for our newsletter.</h1>
     <img src="f48574280b3fb9ea8d06d01ade9ff530.jpg" class="center" id="img_sait" alt="Saitama Motivation">
 
-    <form>
-    <h1 class="center font" id="no_regret">You wont regret.</h1> <!--allow . _ - +  before @-->
-
-    <input class="center" id="email" type="email" placeholder="Email" required-pattern="[A-Za-z0-9._-+]+@[a-z]+.[com|edu|net|org|in]" required><br> <!--so split at @ or +, and have that as username-->
-                <!--dk if i should make the regex in html or in js so they cant bypass with inspect; add cookies-->
-    <input class="center" id="age" placeholder="Age" required-pattern="[0-9]{1-3}" type="number" step="1" min="10" max="100" required><br>
-
-    <input class="center" id="fname" placeholder="First Name" required ><br>
-
-    <input class="center" id="lname" placeholder="Last Name"><br>
-
-    <button class="center" id="button_submit" type="submit">Sign-up</button><br>
+    <form id="form" action="/">
+        <div class="center cntrl">
+            <h1 id="no_regret">You wont regret.</h1> <!--allow . _ - +  before @-->
+            <div class="error"></div>
+        </div>
+        <div class="center cntrl">
+            <input id="email" type="text" placeholder="Email" required-pattern="[A-Za-z0-9._-+]+@[a-z]+.[com|edu|net|org|in]" required><br> <!--so split at @ or +, and have that as username-->
+            <div class="error"></div>
+        </div>
+        <div class="center cntrl">
+            <input id="age" placeholder="Age" type="number" step="1" min="10" max="100" required-pattern="[13]" required><br>
+            <div class="error"></div>
+        </div>
+        <div class="center cntrl">
+            <input id="fname" placeholder="First Name" type="text" required><br>
+            <div class="error"></div>
+        </div>
+        <div class="center cntrl">
+            <input id="lname" placeholder="Last Name" type="text"><br>
+            <div class="error"></div>
+        </div>
+        <div class="center cntrl">
+            <button class="center" id="button_submit" type="submit">Sign-up</button><br>
+        <div class="error"></div>
+        </div>
     </form>
 
     <h3 class="center font disc">Our newsletter is owned by a developer. <br>

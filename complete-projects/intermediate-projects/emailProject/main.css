@@ -64,3 +64,18 @@ input:hover {
 ::placeholder {
     color: #606960;
 }
+.cntrl input:focus{
+    outline: 0;
+}
+.cntrl.success input{
+    border-color: red;
+}
+.cntrl.error input {
+    border-color: red;
+}
+.cntrl .error {
+    color: red;
+    font-size: 4px;
+    height: 10px;
+    
+}
