@@ -40,21 +40,21 @@ const validateInputs = () => {
 
     if (fnameValue === "") {
         setError(fname, "First Name is required");
-    } else if (fnameValue.length < 3 || fnameValue.length > 20 || !isNaN(fnameValue)) {
-        setError(fname, "First Name must be between 3 and 20 characters and should not be a number");
+    } else if (fnameValue.length < 3 || fnameValue.length > 20 || /\d/.test(fnameValue)) {
+        setError(fname, "First Name must be between 3 and 20 characters and should not contain numbers");
     } else {
         setSuccess(fname);
     }
 
     if (lnameValue === "") {
         setError(lname, "Last Name is required");
-    } else if (lnameValue.length < 3 || lnameValue.length > 25 || !isNaN(lnameValue)) {
-        setError(lname, "Last Name must be between 3 and 25 characters and should not be a number");
+    } else if (lnameValue.length < 3 || lnameValue.length > 25 || /\d/.test(lnameValue)) {
+        setError(lname, "Last Name must be between 3 and 25 characters and should not contain numbers");
     } else {
         setSuccess(lname);
     }
 
-    if (ageValue <= 0 || isNaN(ageValue)) {
+    if (ageValue <= 0 || isNaN(ageValue) || ageValue >= 100) {
         setError(age, "Invalid Age");
     } else {
         setSuccess(age);
